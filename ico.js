@@ -209,7 +209,7 @@ eventBus.once('headless_and_rates_ready', () => {
 				});
 				return;
 			}
-			else if (conf.ethEnabled && web3 && Web3.utils.isAddress(lcText)) {
+			else if (conf.ethEnabled && web3 && web3.utils.isAddress(lcText)) {
 				db.query('INSERT OR REPLACE INTO user_addresses (device_address, platform, address) VALUES(?,?,?)', [from_address, 'ETHEREUM', lcText], () => {
 					device.sendMessageToDevice(from_address, 'text', 'Saved your Ethereum address.');
 				});

@@ -100,7 +100,7 @@ function refundEther() {
 				web3.eth.sendTransaction({
 					from: conf.ethRefundDistributionAddress,
 					to: row.address,
-					value: Web3.utils.toWei(row.currency_amount.toString(), 'ether'),
+					value: web3.utils.toWei(row.currency_amount.toString(), 'ether'),
 					gas: 21000
 				}, (err, txid) => {
 					if (err) return callback(err);
