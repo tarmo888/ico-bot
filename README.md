@@ -21,7 +21,7 @@ node sync.js 2>errlog
 ```
 It will take about 3 days on SSD.
 
-The bot is based on [headless wallet](../../../headless-byteball), see its documentation too to understand what options you have.  Also see the documentation of [the core library](../../../byteballcore).  Note that the default config enables TOR for security reasons, you need to have a TOR service running on your machine or disable TOR in conf.
+The bot is based on [headless wallet](../../../headless-obyte), see its documentation too to understand what options you have.  Also see the documentation of [the core library](../../../byteballcore).  Note that the default config enables TOR for security reasons, you need to have a TOR service running on your machine or disable TOR in conf.
 
 Edit `conf.js` or `conf.json` to describe the properties of your token and token sale.  See the comments in `conf.js` which describe the options.  Some of the most important options:
 
@@ -111,7 +111,7 @@ $ geth --ws --wsorigins "*" --wsapi "admin,db,eth,net,web3,personal" --cache=102
 
 A web server that shows stats of the ongoing ICO is started automatically when you start `ico.js`.  The server listens on port 8080 by default.  You usually want to proxy the web traffic to the server via nginx.
 
-You can also start the server separately of `oco.js`:
+You can also start the server separately of `ico.js`:
 ```
 node server/bin/www.js
 ```
